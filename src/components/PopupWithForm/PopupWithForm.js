@@ -19,7 +19,7 @@ function PopupWithForm(props) {
             id="form_name"
             name={props.type}
             className="popup__form"
-            noValidate
+            //не нужна валидация
             onSubmit={props.onSubmit}
           >
             <fieldset className="popup__field-info">
