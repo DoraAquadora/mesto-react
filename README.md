@@ -20,3 +20,5 @@ POST /users - создает пользователя с переданными 
 GET /cards - возвращает все карточки из базы данных;
 POST /cards - создаёт карточку с переданными в теле запроса name и link. owner
 DELETE /cards/:cardId - удаляет карточку по переданному _id;
+
+gh-pages https://doraaquadora.github.io/mesto-react/
