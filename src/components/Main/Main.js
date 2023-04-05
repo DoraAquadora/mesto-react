@@ -3,7 +3,7 @@ import { CurrentUserContext } from '../../contexts/CurrentUserContext'
 import Card from '../Card/Card'
 
 function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick, onCardLike, onCardDelete, cards }) {
-  
+  //подписались
   const currentUser = useContext(CurrentUserContext)
 
   return (
@@ -41,7 +41,8 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick, onCardLike
           +
         </button>
       </section>
-      <section className="elements">
+      {/* объект полученный из контекста */}
+      <section className="elements"> 
         <ul className="elements__list">
           {cards.map((card) => (
             <Card

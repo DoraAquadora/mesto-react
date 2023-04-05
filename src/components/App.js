@@ -11,7 +11,7 @@ import AddPlacePopup from './AddPlacePopup/AddPlacePopup'
 import SubmitPopup from './SubmitPopup/SubmitPopup'
 
 import { CurrentUserContext } from '../contexts/CurrentUserContext'
-
+//bpvtybnm
 function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false)
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false)

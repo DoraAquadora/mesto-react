@@ -3,12 +3,12 @@ import PopupWithForm from "../PopupWithForm/PopupWithForm"
 function SubmitPopup({ isOpen, onClose, onDeleteCard, isBtnLoading, card }) {
 
   function handleDeleteCard(e) {
-    e.preventDefault()
+    e.preventDefault()//jnvtyztv
     onDeleteCard(card)
   }
 
   return (
-    <PopupWithForm
+    <PopupWithForm  //получаем
       id="popup-delete-form"
       title="Вы уверены?"
       button="Да"

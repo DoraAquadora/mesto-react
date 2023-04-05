@@ -4,14 +4,14 @@ function PopupWithForm(props) {
       className={`popup popup_opacity_medium ${
         props.isOpen ? 'popup_opened' : ''
       }`}
-      id={props.id}
+      id={props.id} //задали
     >
       <div className="popup__figure">
         <button
           type="button"
           aria-label="Кнопка закрытия формы"
           className="popup__close-button"
-          onClick={props.onClose}
+          onClick={props.onClose}//получаем далее
         ></button>
         <div className="popup__container">
           <h2 className="popup__title">{props.title}</h2>

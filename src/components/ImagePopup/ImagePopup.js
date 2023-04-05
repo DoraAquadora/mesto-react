@@ -1,4 +1,5 @@
 function ImagePopup(props) {
+  //пропсы
   const { card, onClose } = props
   return (
     <div className={`popup popup_opacity_dark ${card ? "popup_opened" : ""} `} id="popup-figure">
