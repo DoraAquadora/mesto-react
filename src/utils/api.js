@@ -12,26 +12,25 @@ class Api {
     }
   }
 
-  // 0. Карточки должны отображаться на странице только после получения id пользователя
+  // Карточки должны отображаться на странице только после получения id пользователя
   proceedFromServer() {
     return Promise.all([this.getInitialCards(), this.getUserObj()])
   }
 
-  // 1. Загрузка информации о пользователе с сервера
   getUserObj() {
     return fetch(`${this._url}/users/me`, {
       headers: this._headers,
     }).then(this._checkRes)
   }
 
-  // 2. Загрузка карточек с сервера
+  // Загрузка карточек 
   getInitialCards() {
     return fetch(`${this._url}/cards`, {
       headers: this._headers,
     }).then(this._checkRes)
   }
 
-  // 3. Редактирование профиля
+
   changeUserObj(data) {
     return fetch(`${this._url}/users/me`, {
       method: 'PATCH',
@@ -40,7 +39,6 @@ class Api {
     }).then(this._checkRes)
   }
 
-  // 4. Добавление новой карточки
   createCard(data) {
     return fetch(`${this._url}/cards`, {
       method: 'POST',
@@ -49,15 +47,13 @@ class Api {
     }).then(this._checkRes)
   }
 
-  // 7. Удаление карточки
+  
   deleteCard(id) {
     return fetch(`${this._url}/cards/${id}`, {
       method: 'DELETE',
       headers: this._headers,
     }).then(this._checkRes)
   }
-
-  // 8. Постановка и снятие лайка
 
   changeLikeCardStatus(id, isLiked) {
     if (isLiked) {
@@ -73,7 +69,6 @@ class Api {
     }
   }
 
-  // 9. Обновление аватара пользователя
   changeAvatar(avatar) {
     return fetch(`${this._url}/users/me/avatar`, {
       method: 'PATCH',
